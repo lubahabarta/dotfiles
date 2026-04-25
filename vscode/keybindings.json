@@ -1,0 +1,182 @@
+[
+  // NAVIGATION
+  {
+    "command": "workbench.action.navigateLeft",
+    "key": "ctrl-h"
+  },
+  {
+    "command": "workbench.action.navigateRight",
+    "key": "ctrl-l"
+  },
+  {
+    "command": "workbench.action.navigateUp",
+    "key": "ctrl-k"
+  },
+  {
+    "command": "workbench.action.navigateDown",
+    "key": "ctrl-j"
+  },
+  {
+    "command": "workbench.action.terminal.focusNext",
+    "key": "ctrl-l",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.terminal.focusPrevious",
+    "key": "ctrl-h",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.terminal.new",
+    "key": "ctrl-n",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.terminal.kill",
+    "key": "ctrl-w",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.splitEditor",
+    "key": "ctrl-s ctrl-h",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "command": "workbench.action.splitEditorDown",
+    "key": "ctrl-s ctrl-v",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "command": "workbench.action.nextEditorInGroup",
+    "key": "tab",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "command": "workbench.action.previousEditorInGroup",
+    "key": "shift-tab",
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "command": "workbench.action.moveEditorToNextGroup",
+    "key": "ctrl-cmd-l"
+  },
+  {
+    "command": "workbench.action.moveEditorToPreviousGroup",
+    "key": "ctrl-cmd-h"
+  },
+  // RESIZING PANELS
+  {
+    "key": "ctrl-=",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "ctrl--",
+    "command": "workbench.action.decreaseViewSize"
+  },
+
+  // CODING
+  {
+    "command": "editor.action.moveLinesUpAction",
+    "key": "shift-k",
+    "when": "vim.mode == 'VisualLine' && editorTextFocus"
+  },
+  {
+    "command": "editor.action.moveLinesDownAction",
+    "key": "shift-j",
+    "when": "vim.mode == 'VisualLine' && editorTextFocus"
+  },
+  {
+    "key": "shift-k",
+    "command": "editor.action.showHover",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space c a",
+    "command": "editor.action.codeAction",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space c r",
+    "command": "editor.action.rename",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space g d",
+    "command": "editor.action.revealDefinition",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space g r",
+    "command": "editor.action.goToReferences",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space g i",
+    "command": "editor.action.goToImplementation",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space g t",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+
+  // FILE TREE
+  {
+    "key": "space e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
+  },
+  {
+    "key": "space e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "sideBarFocus && !inputFocus"
+  },
+  {
+    "key": "space e",
+    "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  }
+]

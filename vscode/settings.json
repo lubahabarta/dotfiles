@@ -1,0 +1,150 @@
+{
+  "window.titleBarStyle": "custom",
+
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f"],
+      "commands": ["leap.findForward"]
+    },
+    {
+      "before": ["F"],
+      "commands": ["leap.findBackward"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+
+  // EDITOR
+  "editor.lineNumbers": "relative",
+  "editor.lineHeight": 22,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.stickyScroll.enabled": false,
+  "editor.fontFamily": "'RobotoMono Nerd Font Mono', Roboto, monospace",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.rulers": [120],
+  "workbench.colorTheme": "Tokyo Night",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "component tags",
+        "scope": ["support.class.component.tsx"],
+        "settings": {
+          "foreground": "#ff3578"
+        }
+      },
+      {
+        "name": "types",
+        "scope": [
+          "support.type.builtin.ts",
+          "support.type.builtin.tsx",
+          "support.type.primitive.tsx",
+          "meta.interface.ts punctuation.definition.block.ts",
+          "meta.type.annotation.ts",
+          "meta.type.declaration.ts",
+          "entity.name.type.ts",
+          "support.type.primitive.ts",
+          "entity.name.type.alias.ts",
+          "entity.name.type.interface.ts",
+          "storage.type.interface.ts",
+          "keyword.operator.type.annotation.ts",
+          "punctuation.definition.typeparameters.begin.ts",
+          "punctuation.definition.typeparameters.end.ts",
+          "meta.object.type.ts",
+          "meta.type.parameters.ts",
+          "meta.object.member.ts meta.type.tuple.ts",
+          "keyword.control.satisfies.ts",
+          "keyword.control.as.ts",
+          "meta.type.declaration.ts punctuation.definition.block.ts",
+          "meta.type.declaration.ts keyword.operator.assignment.ts",
+          "meta.type.parameters.ts punctuation.separator.comma.ts",
+          "meta.type.parameters.ts punctuation.definition.block.ts",
+          "meta.type.parameters.ts meta.brace.square.ts",
+          "meta.type.annotation.ts keyword.operator.type.ts",
+          "meta.type.annotation.ts punctuation.terminator.statement.ts",
+          "meta.type.annotation.ts punctuation.definition.block.ts",
+          "meta.type.annotation.ts string.quoted.single.ts",
+          "meta.return.type.arrow.ts meta.type.tuple.ts",
+          "keyword.operator.definiteassignment.ts",
+          "keyword.operator.optional.ts",
+          "storage.type.type.ts",
+          "meta.interface.ts"
+        ],
+        "settings": {
+          "foreground": "#f376a1"
+        }
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ffffff26",
+    "editorCursor.foreground": "#b7bdf8",
+    "terminalCursor.foreground": "#b7bdf8",
+    "editorLineNumber.activeForeground": "#b7bdf8",
+
+    // GIT DIFF COLORS
+    "editorGutter.addedBackground": "#a7d27b",
+    "editorGutter.modifiedBackground": "#f6a275",
+    "editorGutter.deletedBackground": "#f376a1",
+    "diffEditor.insertedTextBackground": "#a7d27b33",
+    "diffEditor.removedTextBackground": "#f376a133"
+  },
+
+  // TERMINAL
+  "terminal.integrated.fontFamily": "'RobotoMono Nerd Font Mono', Roboto, monospace",
+  "terminal.integrated.gpuAcceleration": "auto",
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  "prettier.tabWidth": 4,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+  },
+
+  "todohighlight.isEnable": true,
+  "files.autoSave": "onWindowChange",
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "scrolloff.scrolloff": 7,
+  "editor.minimap.enabled": false,
+  "workbench.settings.applyToAllProfiles": [],
+
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "python": "$pythonPath $fullFileName"
+  },
+  "json.schemas": [],
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "settingsSync.ignoredSettings": [],
+  "extensions.experimental.useUtilityProcess": false,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  }
+}
