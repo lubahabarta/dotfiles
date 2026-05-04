@@ -217,3 +217,16 @@ on-mode-changed = []
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+[workspace-to-monitor-force-assignment]
+    1 = "secondary"
+    2 = "secondary"
+    3 = "secondary"
+    G = "secondary"
+    O = "secondary"
+    T = "main"
+    F = "main"
+    M = "main"
+    S = "main"
+    C = "main"
+    P = "main"
